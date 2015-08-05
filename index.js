@@ -9,6 +9,7 @@
 exports = module.exports = {
     debug: debug,
     error: error,
+    info: log,
     log: log,
     pjson: prettyJSON,
     prettyJSON: prettyJSON,

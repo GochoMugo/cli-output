@@ -147,3 +147,10 @@ describe("cli.prettyJSON", function() {
         should.strictEqual(cli.prettyJSON, cli.pjson);
     });
 });
+
+
+describe("cli.info", function() {
+    it("is an alias of cli.log", function() {
+        should.strictEqual(cli.info, cli.log);
+    });
+});
