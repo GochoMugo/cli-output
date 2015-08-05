@@ -1,10 +1,11 @@
 {
   "name": "cli-output",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "My take on simple output for Node.js command-line apps",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "test-coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.*.js"
   },
   "repository": {
     "type": "git",
@@ -27,12 +28,14 @@
       "prettyjson": "^1.1.2"
   },
   "devDependencies": {
+      "coveralls": "^2.11.3",
       "grunt": "^0.4.5",
       "grunt-cli": "^0.1.13",
-      "grunt-eslint": "^14.0.0",
+      "grunt-eslint": "^17.0.0",
       "grunt-mocha-test": "^0.12.7",
       "istanbul": "^0.3.17",
       "load-grunt-tasks": "^3.2.0",
+      "mocha-lcov-reporter": "^0.0.2",
       "should": "^7.0.1"
   },
   "engines": {
