@@ -1,6 +1,6 @@
 {
   "name": "cli-output",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "My take on simple output for Node.js command-line apps",
   "main": "index.js",
   "scripts": {
