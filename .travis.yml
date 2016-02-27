@@ -6,11 +6,3 @@ node_js:
 - '0.10'
 script: npm test
 after_script: npm run test-coverage && cat ./coverage/lcov.info | coveralls
-deploy:
-  provider: npm
-  email: mugo@forfuture.co.ke
-  api_key:
-    secure: jy2hG5gmpDc0Sm8UTJFcuYILdB0xXTAgss9iPJBHZCecVue/2N4vsvHT9Mnz7zQfqh1baBE7W1w0o0ZZob8iVgDIoXQ/AkIAoCoY8abZZRYGdB61N0EGw1M3Fs8Q1HpGsRenAbq0ENz0vrFzRKUt4kTwi1jwSvJWZAXbzy5T3ZgPB66vGtpIbwniuDJnD+H39qDm2v7iFVaarvS8xLoFZMeNnbviMwnPZ62kWh8FCenE36+Hb4yNuxXE2AwRCZC207iiH8wpd9p/t9ITkTMvLH9p8VM7Y+juInKqxUHfZ5qgd3BnKVuF0d/nrNKVy3f2fM1Lnn98IvR0W5pr1iA3veI92X+KLRQCCTQ/5TyCGVujiBjS1Rr57e4YDv9vrvTLZHhFtg56OhnGISm1AQrH6FcgwfPEmqB12ZJ9uUPkoGj23kkD73+FRY5MOSVcUV92+NW8hSS/hFpxv+eHF6i/N/NBr09QXum3TMxn2nsgXeXIcg6JLaUxlZMfm+ZPHxvuKQtp0LreUcSH9RFFZ3EysGsiFEZhSC+T5sn5LyQ0bUZFuXx5CvmJv+WcWbuWmzBNnp0bVhEv2p8quMye0FTj/wHGbnixt+xtIlRkDqA6rFRDn7u1e9MXa1U5J67FQj36oGvrxAs39/O1+jnJZ2Hlb32ZLuifIdjkrS4fwM/1b1M=
-  on:
-    tags: true
-    repo: GochoMugo/cli-output
