@@ -154,3 +154,39 @@ describe("cli.info", function() {
         should.strictEqual(cli.info, cli.log);
     });
 });
+
+
+describe("PS1:", function() {
+    var ps1 = " ⇒ ";
+    var previousPS1 = process.env.CLI_OUTPUT_PS1 || '';
+
+    afterEach(function() {
+        process.env.CLI_OUTPUT_PS1 = previousPS1;
+    });
+
+
+    it("cli.setPS1 sets the PS1 used", function(done) {
+        run("cli.setPS1('" + ps1 + "'); cli.log('test')", function(err, stdout) {
+            should(err).not.be.ok();
+            should(stdout).containEql(ps1);
+            return done();
+        });
+    });
+
+    it("defaults to ${CLI_OUTPUT_PS1}, if set", function(done) {
+        process.env.CLI_OUTPUT_PS1 = ps1;
+        run("cli.log('test')", function(err, stdout) {
+            should(err).not.be.ok();
+            should(stdout).containEql(ps1);
+            return done();
+        });
+    });
+
+    it("defaults to ' >>> ', if ${CLI_OUTPUT_PS1} not set", function(done) {
+        run("cli.log('test')", function(err, stdout) {
+            should(err).not.be.ok();
+            should(stdout).containEql(' >>> ');
+            return done();
+        });
+    });
+});

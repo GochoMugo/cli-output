@@ -15,6 +15,7 @@ exports = module.exports = {
     prettyJSON: prettyJSON,
     rawJSON: rawJSON,
     rjson: rawJSON,
+    setPS1: setPS1,
     success: success,
 };
 
@@ -30,7 +31,19 @@ var prettyjson = require("prettyjson");
 
 
 // module variables
-var marker = " >>> ";
+var marker = process.env.CLI_OUTPUT_PS1 || " >>> ";
+
+
+/**
+ * Sets the marker/PS1 used
+ *
+ * @param {String} ps1
+ * @return {String} set marker
+ */
+function setPS1(ps1) {
+    marker = ps1;
+    return marker;
+}
 
 
 /**

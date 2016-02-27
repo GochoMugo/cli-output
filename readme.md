@@ -59,6 +59,14 @@ Outputs `json` in its normal format but with indentations.
 Alias: `out.rjson(json)`
 
 
+### out.setPS1(ps1)
+
+Sets the marker/PS1 used from `" >>> "` to `ps1`.
+
+Also, the marker automatically defaults to the environment variable
+`${CLI_OUTPUT_PS1}`, if it is a non-empty string.
+
+
 ## license:
 
 **The MIT License (MIT)**
